@@ -54,6 +54,7 @@ function App() {
   
   const HandleRetring = () => {
     clearTimeout(retryTimeout);
+    setIsError(false);
   };
 
   
