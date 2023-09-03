@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 
 import MoviesList from './components/MoviesList';
 import './App.css';
+import Movieform from './components/Movieform';
 
 function App() {
 
@@ -65,6 +66,9 @@ function App() {
 
   return (
     <React.Fragment>
+      <section>
+        <Movieform />
+      </section>
       <section >
         <button onClick={FetchMovieHandler}>Fetch Movies</button>
         {isError && <button onClick={HandleRetring}>Cancel</button>}
