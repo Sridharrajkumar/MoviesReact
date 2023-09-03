@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import classes from './Movieform.module.css'
 
-const Movieform = () => {
+const Movieform = (props) => {
 
     const titleRef = useRef();
     const openingtextRef = useRef();
@@ -19,9 +19,10 @@ const Movieform = () => {
             openingText:openingtext,
             releaseDate:releasedate,
         };
-        
-        
-        console.log(newMovieObj);
+        props.OnAddMovie(newMovieObj);
+        titleRef.current.value = null;
+        openingtextRef.current.value = null;
+        releasedataRef.current.value = null;
     }
     
 
